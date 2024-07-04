@@ -9,12 +9,12 @@ on:
       - main
 
 jobs:
-  tf_fmt:
+  prod:
     name: Apply
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 'terraform/'
+        working-directory: 'terraform/environments/prod'
     steps:
 
     - uses: hashicorp/setup-terraform@v2
