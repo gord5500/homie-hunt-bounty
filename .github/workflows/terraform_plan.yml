@@ -1,8 +1,10 @@
 name: Terraform Plan
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
+      - ".github/workflows/terraform_plan.yml"
       - "terraform/**"
 
 jobs:
