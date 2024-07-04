@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: './terraform/'
+        working-directory: 'terraform/'
     steps:
 
     - uses: hashicorp/setup-terraform@v2
@@ -27,7 +27,7 @@ jobs:
         aws-region: us-east-1
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-      
+
     - name: Checkout
       uses: actions/checkout@v1
 
